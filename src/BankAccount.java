@@ -5,10 +5,10 @@
 public class BankAccount {
 
     // Numéro du compte bancaire (identifiant unique)
-    private String account;
+    protected String account;
 
     // Solde actuel du compte
-    private double balance;
+    protected double balance;
 
     /**
      * Constructeur pour initialiser un compte bancaire.
@@ -63,6 +63,7 @@ public class BankAccount {
      */
     @Override
     public String toString() {
-        return "Compte: " + account + " | Solde: " + balance + " $";
+        // String.format("%.0f", balance) évite la notation scientifique (ex: 1.0E7)
+        return "Compte: " + account + " | Solde: " + String.format("%.0f", balance) + " FCFA";
     }
 }

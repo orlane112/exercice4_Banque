@@ -47,6 +47,6 @@ public class CheckingAccount extends BankAccount {
      */
     @Override
     public String toString() {
-        return "[Compte Courant] " + super.toString() + " | Limite découvert: " + limit + " $";
+        return "[Compte Courant] " + super.toString() + " | Limite découvert: " + String.format("%.0f", limit) + " FCFA";
     }
 }
